@@ -15,19 +15,19 @@
       </div>
 
       <div class="product-info">
-        <h1> {{ product }} </h1>
-        <!-- <p v-show="inStock">In Stock</p> -->
-        <p v-if="inVentory > 10">In Stock</p>
-        <p v-else-if="inVentory<=10 && inVentory >0">Almost sold out</p>
+        <h1 > {{ title }} </h1>
+        <p v-if="inStock > 10">In Stock</p>
+        <!-- <p v-else-if="inStock<=10 && inVentory >0">Almost sold out</p> -->
         <p v-else :class="{outOfStock: !inStock}">Out of Stock</p>
-        <span v-if="onSale">On Sale!</span>
+        <p>{{ sale }}</p>
+        <!-- <span v-if="onSale">On Sale!</span> -->
         <li v-for="detail in details">{{detail}}</li>
         <li 
-          v-for="variant in variants" 
+          v-for="(variant, index) in variants" 
           :key="variant.id" 
           class="color-box" 
           :style="{ backgroundColor: variant.color}" 
-          @mouseover="updateProduct(variant.image)"
+          @mouseover="updateProduct(index)"
         >
         </li>
         <button 
