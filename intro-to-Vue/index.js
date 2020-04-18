@@ -3,8 +3,8 @@ const app = new Vue({
   data: {
     product: 'Socket',
     image: './assets/vmSocks-green.jpg',
-    inVentory: 100,
-    inStock: true,
+    inVentory: 0,
+    inStock: false,
     onSale: true,
     details: ["80% cotton","20% polyester", "Gender-neutral"],
     variants: [
