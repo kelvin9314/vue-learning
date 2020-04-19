@@ -24,6 +24,11 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
+### Mock api with json-server
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```bash=
+yarn global add  json-server
+
+# it will runs in localhost:3000/events
+json-server --watch db.json
+```
