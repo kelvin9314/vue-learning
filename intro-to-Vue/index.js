@@ -1,3 +1,6 @@
+// a global channel to send information
+var eventBus = new Vue( )
+
 Vue.component('product',{
   props: {
     premium: {
@@ -49,20 +52,7 @@ Vue.component('product',{
 
       </div>
 
-      <div>
-        <h2>Reviews</h2>
-        <p v-if="!reviews.length">There are no reviews yet.</p>
-        <ul v-else>
-          <li v-for="review in reviews">
-            <p>{{ review.name }}</p>
-            <p>Rating: {{ review.rating }}</p>
-            <p>{{ review.review }}</p>
-          </li>
-        </ul>
-      </div>
-
-      <product-review @review-submitted="addReview"></product-review>
-
+      <product-tabs :reviews="reviews"></product-tabs>
     </div>
   `,
   data(){
@@ -102,9 +92,6 @@ Vue.component('product',{
     updateProduct(index) {
       this.selectedVariant = index
     },
-    addReview(newReview){
-      this.reviews.push(newReview)
-    }
   },
   computed: {
     title() {
@@ -125,6 +112,12 @@ Vue.component('product',{
       }
         return 2.99
     }
+  },
+  mounted() {
+    eventBus.$on('review-submitted', productView => {
+      this.reviews.push(productView)
+    })
+    
   },
 
 })
@@ -187,15 +180,14 @@ Vue.component('product-review',{
   },
   methods: {
     onSubmit() {
-      if(this.name && this.review && this.rating){
+      if(this.name && this.review && this.rating && this.recommend){
         let productReview = {
           name: this.name,
           review: this.review,
           rating: this.rating,
           recommend: this.recommend,
         }
-        this.$emit('review-submitted', productReview)
-  
+        eventBus.$emit('review-submitted', productReview)
         this.name = null
         this.review = null
         this.rating = null
@@ -209,6 +201,49 @@ Vue.component('product-review',{
       }
       
 
+    }
+  }
+})
+
+Vue.component('product-tabs', {
+  props: {
+    reviews: {
+      type: Array,
+      required: true
+    }
+  },
+  template: `
+    <div>
+      <span 
+        class="tab"
+        :class="{activeTab: selectedTab === tab}"
+        v-for="(tab, index) in tabs" 
+        :key=""indx 
+        @click="selectedTab = tab"
+      >
+        {{ tab }}
+      </span>
+
+      <div v-show="selectedTab === 'Reviews'" >
+        <h2>Reviews</h2>
+        <p v-if="!reviews.length">There are no reviews yet.</p>
+        <ul v-else>
+          <li v-for="review in reviews">
+            <p>{{ review.name }}</p>
+            <p>Rating: {{ review.rating }}</p>
+            <p>{{ review.review }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <product-review v-show="selectedTab === 'Make a Review'" ></product-review>
+
+    </div>
+  `,
+  data() {
+    return {
+      tabs: ['Reviews', 'Make a Review'],
+      selectedTab: 'Reviews'
     }
   }
 })
