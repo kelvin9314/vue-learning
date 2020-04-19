@@ -44,6 +44,42 @@
       "date": "2019-02-02T23:27:00.000Z",
       "time": "1:00",
       "attendees": []
+    },
+    {
+      "id": 1731823,
+      "user": {
+        "id": "abc123",
+        "name": "Kelvin Mok"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Kelvin Mok"
+      },
+      "title": "123",
+      "description": "123",
+      "location": "123",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 2523113,
+      "user": {
+        "id": "abc123",
+        "name": "Kelvin Mok"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Kelvin Mok"
+      },
+      "title": "456",
+      "description": "456",
+      "location": "456",
+      "date": "2020-04-02T15:26:00.000Z",
+      "time": "18:00",
+      "attendees": []
     }
   ]
 }
