@@ -1,0 +1,13 @@
+!**/.eslintrc*
+node_modules*
+dist
+*.svg
+*.ico
+*.json
+.gitignore
+*.md
+*.log
+*.lock
+
+# Coverage directory used by tools like istanbul
+coverage
