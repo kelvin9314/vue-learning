@@ -13,19 +13,20 @@ const routes = [
     component: EventList,
   },
   {
-    path: '/event', // new path
+    path: '/event:id',
     name: 'event-show',
     component: EventShow,
+    props: true,
   },
   {
-    path: '/event/create', // new path
+    path: '/event/create',
     name: 'event-create',
     component: EventCreate,
   },
 ]
 
 const router = new VueRouter({
-  mode: 'hash', // history OR hash mode
+  mode: 'history', // history OR hash mode
   base: process.env.BASE_URL,
   routes,
 })
