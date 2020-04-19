@@ -80,6 +80,87 @@
       "date": "2020-04-02T15:26:00.000Z",
       "time": "18:00",
       "attendees": []
+    },
+    {
+      "id": 1,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Cat Cabaret",
+      "description": "Yay felines!",
+      "location": "Meow Town",
+      "date": "2019-01-03T21:54:00.000Z",
+      "time": "2:00",
+      "attendees": []
+    },
+    {
+      "id": 2,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Kitty Cluster",
+      "description": "Yay cats!",
+      "location": "Catlandia",
+      "date": "2019-01-31T22:09:00.000Z",
+      "time": "7:00",
+      "attendees": []
+    },
+    {
+      "id": 3,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Puppy Parade",
+      "description": "Yay pups!",
+      "location": "Puptown ",
+      "date": "2019-02-02T23:27:00.000Z",
+      "time": "1:00",
+      "attendees": []
+    },
+    {
+      "id": 4,
+      "user": {
+        "id": "abc123",
+        "name": "Kelvin Mok"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Kelvin Mok"
+      },
+      "title": "123",
+      "description": "123",
+      "location": "123",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 5,
+      "user": {
+        "id": "abc123",
+        "name": "Kelvin Mok"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Kelvin Mok"
+      },
+      "title": "456",
+      "description": "456",
+      "location": "456",
+      "date": "2020-04-02T15:26:00.000Z",
+      "time": "18:00",
+      "attendees": []
     }
   ]
 }
