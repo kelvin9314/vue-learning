@@ -16,33 +16,39 @@
       "attendees": []
     },
     {
-      "id": 8419988,
+      "id": 4023814,
       "user": {
         "id": "abc123",
-        "name": "Adam"
+        "name": "Kelvin"
       },
-      "category": "animal welfare",
-      "organizer": "Adam",
-      "title": "Kitty Cluster",
-      "description": "Yay cats!",
-      "location": "Catlandia",
-      "date": "2019-01-31T22:09:00.000Z",
-      "time": "7:00",
+      "category": "housing",
+      "organizer": {
+        "id": "abc123",
+        "name": "Kelvin"
+      },
+      "title": "20200420",
+      "description": "20200420",
+      "location": "20200420",
+      "date": "2020-04-01T15:00:00.000Z",
+      "time": "16:00",
       "attendees": []
     },
     {
-      "id": 4582797,
+      "id": 7076307,
       "user": {
         "id": "abc123",
-        "name": "Adam"
+        "name": "Kelvin"
       },
-      "category": "animal welfare",
-      "organizer": "Adam",
-      "title": "Puppy Parade",
-      "description": "Yay pups!",
-      "location": "Puptown ",
-      "date": "2019-02-02T23:27:00.000Z",
-      "time": "1:00",
+      "category": "housing",
+      "organizer": {
+        "id": "abc123",
+        "name": "Kelvin"
+      },
+      "title": "testing",
+      "description": "123456",
+      "location": "123456",
+      "date": "2020-04-02T15:05:00.000Z",
+      "time": "20:00",
       "attendees": []
     }
   ]
